@@ -4,7 +4,6 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
-
 // MIDDLEWARES
 app.use(express.json());
 
@@ -22,5 +21,5 @@ const transactionsRouter = require('./routes/transactionsRouter')
 app.use('/transaction', transactionsRouter)
 
 app.listen(process.env.PORT, () => {
-	console.log(`API is running on PORT - ${process.env.PORT}`)
+	console.log(`🚀 API is running on PORT - ${process.env.API_PORT}`)
 })
