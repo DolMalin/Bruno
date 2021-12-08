@@ -7,12 +7,15 @@ const walletSchema = new mongoose.Schema({
 	},
 	usdt:{
 		type:Number,
+		default:500
 	},
 	btc:{
 		type:Number,
+		default:0
 	},
 	eth:{
 		type:Number,
+		default:0
 	}
 })
 

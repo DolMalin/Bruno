@@ -5,8 +5,12 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "(cd api && npm run start) & node app.js"
+    "start": "(cd api && npm run start) & nodemon app.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "nodemon": "^2.0.15"
+  }
 }

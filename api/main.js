@@ -20,6 +20,9 @@ app.use('/wallet', walletRouter)
 const transactionsRouter = require('./routes/transactionsRouter')
 app.use('/transaction', transactionsRouter)
 
-app.listen(process.env.PORT, () => {
+const userRouter = require('./routes/userRouter')
+app.use('/user', userRouter)
+
+app.listen(process.env.API_PORT, () => {
 	console.log(`🚀 API is running on PORT - ${process.env.API_PORT}`)
 })
