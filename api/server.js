@@ -14,7 +14,7 @@ mongoose.connect(`mongodb://127.0.0.1:27017/${process.env.DB_NAME}`, { useNewUrl
 })
 
 process.on('SIGTERM', () => {
-	logger.info('SIGTERM ok')
+	console.log('SIGTERM ok')
 	if (server) {
 		server.close()
 	}
