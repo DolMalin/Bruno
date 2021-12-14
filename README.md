@@ -15,4 +15,4 @@ APP_PORT=3030
 ## Scripts
 Lancer les commandes suivantes dans `/client` et `/api` : 
 
-```npm run dev``` _Lancement des serveurs FRONT et API
+```npm run dev``` _Lancement des serveurs FRONT et API_
