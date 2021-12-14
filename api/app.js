@@ -12,3 +12,5 @@ app.use('/transaction', transactionsRouter)
 
 const userRouter = require('./routes/userRouter')
 app.use('/user', userRouter)
+
+module.exports = app
