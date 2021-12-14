@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const User = require('../models/user')
-const axios = require('axios')
 
 const getUser = async (req, res, next) => {
     let user
@@ -31,22 +30,22 @@ router.get('/:id', getUser, (req,res) => {
     res.json(res.user)
 })
 
-router.post('/', async (req,res) => {
-    const user = new User({
-        username: req.body.username,
-    })
+// router.post('/', async (req,res) => {
+//     const user = new User({
+//         username: req.body.username,
+//     })
 
-    try {
-		const newUser = await user.save( async (err, user) => {
-			await axios.post("http://localhost:4141/wallet", {
-				userId: user.id
-			})
-		})
-	res.status(201).json(newUser)
-    } catch(err) {
-        res.status(400).json().json({message: err.message})
-    }
-})
+//     try {
+// 		const newUser = await user.save( async (err, user) => {
+// 			await `axios`.post("http://localhost:4141/wallet", {
+// 				userId: user.id
+// 			})
+// 		})
+// 	res.status(201).json(newUser)
+//     } catch(err) {
+//         res.status(400).json().json({message: err.message})
+//     }
+// })
 
 router.patch('/:id', getUser, async (req,res) => {
     if (req.body.username != null) {
